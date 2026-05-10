@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+public class Main {
+
+    // ==============================
+    // Metodo para saludar al usuario
+    // ==============================
+    public static void saludarUsuario() {
+
+        System.out.println("=================================");
+        System.out.println(" Bienvenido al programa en Java ");
+        System.out.println("=================================");
+
+    }
+
+    // ==========================================
+    // Metodo para pedir dos numeros enteros
+    // ==========================================
+    public static int[] pedirNumeros() {
+
+        Scanner leer = new Scanner(System.in);
+
+        int a;
+        int b;
+
+        System.out.print("Ingrese el primer numero entero: ");
+        a = leer.nextInt();
+
+        System.out.print("Ingrese el segundo numero entero: ");
+        b = leer.nextInt();
+
+        // Retorna los dos numeros en un arreglo
+        return new int[]{a, b};
+
+    }
+
+    // ======================================
+    // Metodo para sumar enteros positivos
+    // ======================================
+    public static int sumarEnterosPositivos(int a, int b) {
+
+        // Validacion de numeros positivos
+        if (a >= 0 && b >= 0) {
+
+            return a + b;
+
+        } else {
+
+            System.out.println("Error: Los numeros deben ser positivos.");
+            return 0;
+
+        }
+
+    }
+
+    // ======================
+    // Metodo principal MAIN
+    // ======================
+    public static void main(String[] args) {
+
+        // Llamar metodo de saludo
+        saludarUsuario();
+
+        // Llamar metodo para pedir numeros
+        int[] numeros = pedirNumeros();
+
+        // Guardar valores del arreglo
+        int a = numeros[0];
+        int b = numeros[1];
+
+        // Llamar metodo de suma
+        int resultado = sumarEnterosPositivos(a, b);
+
+        // Mostrar resultado final
+        System.out.println("La suma es: " + resultado);
+
+    }
+}
