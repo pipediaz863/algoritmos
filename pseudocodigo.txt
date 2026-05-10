@@ -1,0 +1,62 @@
+Proceso ProgramaSuma
+
+    // ==================================
+    // Metodo para saludar al usuario
+    // ==================================
+    SubProceso SaludarUsuario
+
+        Escribir "================================="
+        Escribir " Bienvenido al programa en Java "
+        Escribir "================================="
+
+    FinSubProceso
+
+
+    // ==================================
+    // Metodo para pedir dos numeros
+    // ==================================
+    SubProceso PedirNumeros
+
+        Definir a, b Como Entero
+
+        Escribir "Ingrese el primer numero entero:"
+        Leer a
+
+        Escribir "Ingrese el segundo numero entero:"
+        Leer b
+
+    FinSubProceso
+
+
+    // ==================================
+    // Metodo para sumar enteros positivos
+    // ==================================
+    SubProceso SumarEnterosPositivos(a, b)
+
+        Definir resultado Como Entero
+
+        Si a >= 0 Y b >= 0 Entonces
+
+            resultado <- a + b
+
+            Escribir "La suma es: ", resultado
+
+        Sino
+
+            Escribir "Error: Los numeros deben ser positivos"
+
+        FinSi
+
+    FinSubProceso
+
+
+    // ==================================
+    // Metodo principal MAIN
+    // ==================================
+    SaludarUsuario
+
+    PedirNumeros
+
+    SumarEnterosPositivos(a, b)
+
+FinProceso
